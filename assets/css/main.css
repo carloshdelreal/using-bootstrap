@@ -1,0 +1,38 @@
+nav{
+    background-color: #f72210;
+    color: white;
+}
+nav svg{
+    display: block;
+    width: 132px;
+    height: 20px;
+    fill: white;
+}
+.navbar-buttons a{
+    display: block;
+    float: left;
+    width: 77px;
+    height: 26px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+
+}
+.navbar-buttons .subscribe{
+    background-color: white;
+    color: #f72210;
+}
+.navbar-buttons div{
+    float: left;
+}
+.navbar-buttons span{
+    width: 22px;
+    height: 2px;
+    margin: 5px 0px 0px 12px;
+    background-color: white;
+    display: block;
+}
+.big-logo svg{
+    width: 300px;
+}
