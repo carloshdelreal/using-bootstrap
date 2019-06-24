@@ -1,6 +1,7 @@
-nav{
+.navbar{
     background-color: #f72210;
     color: white;
+    padding: 0 16px;
 }
 nav svg{
     display: block;
@@ -34,5 +35,6 @@ nav svg{
     display: block;
 }
 .big-logo svg{
-    width: 300px;
+    width: 426px;
+    height: 90px;
 }
