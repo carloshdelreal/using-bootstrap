@@ -112,7 +112,6 @@ main{
     justify-content: center;
 
 }
-
 .feature2 .image a{
     display: block;
 }
@@ -124,10 +123,12 @@ main{
 .feature2 .wrap{
     position: relative;
 }
+
 .feature2 .h2>a,
 .feature2 .clearfix h4 a,
-.opinion h4 a{
-    text-decoration: none;
+.opinion h4 a,
+.magazine-features h5 a{
+    text-decoration-color: red;
     color: black;
     font-weight: 700;
     font-size: 22px;
@@ -193,9 +194,131 @@ main{
     font-size: 14px;
 
 }
-
-
 /* Opinion */
+
+/* latest news */
+
+.latest-news{
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+}
+
+/* latest news */
+.sponsor{
+    margin-bottom: 30px;
+}
+.sponsor .info{
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+
+}
+.sponsor h1{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* news signup */
+
+.news-signup{
+    margin-top: 30px;
+}
+.news-signup>div{
+    max-width: 300px;
+    padding: 20px;
+    margin: 0 auto 30px auto; 
+    background-color: #f4f5f6;
+    border: 1px solid #e5e5e5
+
+
+}
+.news-signuplogo{
+    float: left;
+    margin-top: 12px;
+    font-weight: 800;
+}
+.news-signuplogo span{
+    padding: 5px 10px 5px 10px;
+    margin-right: 10px;
+    background: red;
+    color: white;
+    font-weight: 800;
+}
+.news-signup .title{
+    padding-left: 40px;
+    font-weight: 800;
+    
+}
+.news-signup>div>a:first-of-type{
+    display: inline-block;
+    background: #666;
+    margin: 10px auto 10px 0;
+    padding: 8px 12px;
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+}
+.news-signup>div>a:first-of-type:hover{
+    background: #999;
+}
+.news-signup>div>a:nth-of-type(2){
+    color: #333;
+    font-size: 15px;
+}
+
+
+/* MAGAZINE */
+
+.magazine>a{
+    display: block;
+    background: #f4f5f6;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 17px;
+}
+.in-themagazine{
+    padding: 30px 0px 30px 0px;
+    display: flex;
+    justify-content: center;
+}
+.in-themagazine .title{
+    padding: 10px 0 10px 45px;
+}
+
+
+.magazine-features .category span{
+    padding: 5px 10px 5px 10px;
+}
+.magazine-features .category span:first-of-type{
+    background: #f72210;
+    color: white;
+}
+.magazine-features .category{
+    padding: 10px 0px;
+    font-weight: 600;
+}
+.magazine-features .category a{
+    color: #f72210;
+}
+.magazine-features h5 a{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.flex-g{
+    flex-grow: 1;
+}
+
+/* editor picks */
+.editorspick-t{
+    border-bottom: 1px solid #d9d9d9;
+    margin: 15px 0 15px 0;
+    padding: 12px 0;
+}
+.editors-pick .h2>a{
+    font-size: 20px
+}
 
 @media only screen and (min-width: 482px){
     .feature2 .clearfix img{
@@ -209,6 +332,14 @@ main{
     .feature2 .clearfix img{
         width: 135px;
         height: 90px;
+    }
+    .in-themagazine {
+        border-bottom: 1px solid #d9d9d9;
+        margin-bottom: 10px;
+        padding: 0px 0px 10px 0px;
+    }
+    .second-row{
+        margin-top: 30px;
     }
 }
 
