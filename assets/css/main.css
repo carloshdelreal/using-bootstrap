@@ -386,6 +386,72 @@ main{
     border-top: 1px solid #d9d9d9;
 }
 
+
+/* footer */
+
+.subscribe-f{
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 2px solid #f4f5f6;
+}
+.subscribe-f .row-title{
+    text-align: left;
+    font-size: 16px;
+    color: #f72210;
+    margin-top: 20px;
+}
+.subscribe-f .image-wrapper{
+    display: inline-block;
+    position: relative;
+    padding-bottom: 13px;
+    padding-right: 90px;
+}
+.subscribe-f .subscribe-footer .image-wrapper>div:last-of-type{
+    position: absolute;
+    top: 13px;
+    left: 80px;
+}
+.image-wrapper{
+    margin-bottom: 15px;
+}
+.subscribe-footer .image-container{
+    width: 170px;
+    height: 228px;
+}
+.subscribe-f .info h2{
+    font-size: 20px;
+    font-weight: 800px;
+}
+.subscribe-f .info p{
+    font-size: 15px;
+    margin: 25px 0;
+}
+.subscribe-f .info a{
+    display: inline-block;
+    padding: 10px 10px 10px 12px;
+    color: white;
+    font: bold 18px/18px "Roboto Condensed",sans-serif;
+    text-transform: uppercase;
+    background-color: #f72210;
+}
+.subscribe-footer{
+    padding: 30px 0 30px 0;
+}
+
+.subscribe-footer-news .image-container{
+    background: url(../img/subscribe-img2.gif) center center / cover no-repeat;
+    height: 160px;
+}
+.subscribe-footer-news .info{
+    border: 1px solid #d9d9d9;
+    border-top: none;
+    padding: 25px 0;
+}
+
+
+/* footer */
+
 @media only screen and (min-width: 482px){
     .feature2 .clearfix img{
         width: 258px;
@@ -407,6 +473,29 @@ main{
     .second-row{
         margin-top: 30px;
     }
+    .subscribe-footer{
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        text-align: left;
+    }
+    .subscribe-footer .info{
+        padding-left: 15px;
+    }
+    .subscribe-footer-news{
+        display: flex;
+        text-align: left;
+    }
+    .subscribe-footer-news .image-container{
+        width: 100%;
+        height: auto;
+    }
+    .subscribe-footer-news .info{
+        padding: 30px;
+        border: 1px solid #d9d9d9;
+        border-left: none;
+        
+    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -420,6 +509,12 @@ main{
         height: 34px;
         font-size: 18px;
         width: 102px;
+    }
+    .subscribe-footer-news .info{
+        height: 315px;
+    }
+    .subscribe-footer-news .image-container{
+        width: 180%;
     }
 }
 
