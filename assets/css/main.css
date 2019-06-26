@@ -239,7 +239,7 @@ main{
     font-weight: 800;
 }
 .news-signuplogo span{
-    padding: 5px 10px 5px 10px;
+    padding: 2px 7px 2px 7px;
     margin-right: 10px;
     background: red;
     color: white;
@@ -316,9 +316,34 @@ main{
     margin: 15px 0 15px 0;
     padding: 12px 0;
 }
+
+.featured-slideshows .h2>a,
 .editors-pick .h2>a{
     font-size: 20px
 }
+.slideshows-t .news-signuplogo span{
+    position: relative;
+}
+.slideshows-t .news-signuplogo span::after{
+    border-bottom: 3px solid red;
+    border-right: 3px solid red;
+    display: block;
+    content: "";
+    width: 26px;
+    height: 25px;
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+}
+.featured-slideshows .category a{
+    width: 70px;
+    height: 52px;
+    background:
+        url(../img/icon-slideshows-nw.png) 0 0 no-repeat;
+    background-size: cover;
+
+}
+
 
 @media only screen and (min-width: 482px){
     .feature2 .clearfix img{
