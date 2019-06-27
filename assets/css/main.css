@@ -80,7 +80,6 @@ nav svg{
     width: 78px;
     top: 0px;
     right: 0px;
-    background-color: #f72210;
     border-left: 12px solid white;
     border-top: 13px solid #f72210;
 
@@ -356,7 +355,6 @@ main{
     background: none;
 }
 .featured-slideshows-row{
-    border-bottom: 1px solid #d9d9d9;
     padding-bottom: 40px;
 }
 .row-title a{
@@ -421,7 +419,7 @@ main{
 }
 .subscribe-f .info h2{
     font-size: 20px;
-    font-weight: 800px;
+    font-weight: 800;
 }
 .subscribe-f .info p{
     font-size: 15px;
@@ -464,10 +462,10 @@ main{
     display: inline-block;
     
 }
-.footer-row header{
+.footer-row .header{
     border-bottom: 1px solid #d9d9d9;
 }
-.footer-row header ul{
+.footer-row .header ul{
     display: block;
 }
 .footer-row{
@@ -548,14 +546,14 @@ main{
         border-left: none;
         
     }
-    .footer-row header{
+    .footer-row .header{
         display: flex;
         justify-content: space-between;
     }
-    .footer-row header>div{
+    .footer-row .header>div{
         display: flex;
     }
-    .footer-row header p{
+    .footer-row .header p{
         align-self: flex-end;
         padding-left: 15px;
     }
