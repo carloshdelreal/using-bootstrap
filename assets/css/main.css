@@ -10,25 +10,27 @@ nav svg{
     fill: white;
 }
 .navbar-buttons a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    float: left;
-    width: 77px;
-    height: 26px;
     text-align: center;
     text-decoration: none;
     color: white;
     font-size: 14px;
     font-weight: 600;
+    padding: 4px 8px;
 
+}
+.arrow-right{
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    margin: 0 6px 3px 0px;
+    fill: #f72210;
 }
 .navbar-buttons .subscribe{
     background-color: white;
     color: #f72210;
 }
 .navbar-buttons div{
-    float: left;
+    float: right;
 }
 .navbar-buttons span{
     width: 22px;
@@ -37,6 +39,19 @@ nav svg{
     background-color: white;
     display: block;
 }
+
+.navbar-log .row{
+    position: relative;
+}
+.big-logo{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    transform: translate(-50%,0);
+    left: 50%;
+    padding: 20px 0 10px 0;
+}
+
 .big-logo svg{
     width: 396px;
     height: 60px;
@@ -45,9 +60,11 @@ nav svg{
     margin-top: 95px;
     background-color: white;
     position: relative;
+    padding: 0 0 5px 0;
+    border-bottom: 2px solid #f4f5f6;
 }
 .navbar-links li{
-    float: left;
+    display: inline-block;
     margin: 0 10px 0 0;
     padding: 0 10px 0 0;
     border-right: 1px solid #d9d9d9;
@@ -56,6 +73,15 @@ nav svg{
 }
 .navbar-links ul{
     list-style: none;
+    padding: 15px 10px 10px 15px;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.navbar-links li:last-of-type{
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
 }
 .navbar-links a{
     color: black;
@@ -73,7 +99,10 @@ nav svg{
     border: none;
 }
 .navbar-links label{
-    margin: 0;
+    padding-top: 15px;
+}
+.search-div{
+    display: inline-block;
 }
 .nav-decoration{
     position: absolute;
@@ -83,7 +112,6 @@ nav svg{
     right: 0px;
     border-left: 12px solid white;
     border-top: 13px solid #f72210;
-
 }
 
 /* navbar and header */
@@ -92,7 +120,6 @@ nav svg{
 /* main and articles */
 
 main{
-    margin-top: 42px;
     min-width: 320px;
 }
 .block-title{
@@ -562,15 +589,13 @@ main{
 
 @media only screen and (min-width: 992px) {
     .navbar-logo{
-        padding: 20px 0 15px 0;
+        padding: 47px 0 21px 25px;
     }
     .navbar-buttons{
         margin-right: 10px; 
     }
     .navbar-buttons a{
-        height: 34px;
         font-size: 18px;
-        width: 102px;
     }
     .subscribe-footer-news .info{
         height: 315px;
