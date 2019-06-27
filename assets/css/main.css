@@ -388,7 +388,7 @@ main{
 
 
 /* footer */
-
+.subscribe-footer,
 .subscribe-f{
     text-align: center;
     margin-top: 20px;
@@ -449,9 +449,61 @@ main{
     padding: 25px 0;
 }
 
+/* subscribe footer */
 
 /* footer */
-
+.f-logo{
+    width: 250px;
+}
+.f-logo svg{
+    fill: #f72210;
+}
+.footer-row ul{
+    text-decoration: none;
+    padding: 0;
+    display: inline-block;
+    
+}
+.footer-row header{
+    border-bottom: 1px solid #d9d9d9;
+}
+.footer-row header ul{
+    display: block;
+}
+.footer-row{
+    padding: 30px 15px;
+}
+.footer-row li{
+    display: inline-block;
+    padding: 0 10px 0 0;
+}
+.footer-row li a{
+    color: #666;
+    font-size: 26px;
+}
+.footer-row p{
+    margin: 0 0 12px 0;
+    font-size: 12px;
+}
+.footer-row .menu li{
+    display: inline-block;
+}
+.footer-row .menu a{
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer-row .menu a:hover{
+    color: black;
+}
+.footer-row .first{
+    padding-left: 0;
+}
+.footer-row label{
+    padding-right: 10px;
+}
+.footer-links-edition{
+    display: flex;
+}
 @media only screen and (min-width: 482px){
     .feature2 .clearfix img{
         width: 258px;
@@ -496,6 +548,17 @@ main{
         border-left: none;
         
     }
+    .footer-row header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-row header>div{
+        display: flex;
+    }
+    .footer-row header p{
+        align-self: flex-end;
+        padding-left: 15px;
+    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -515,6 +578,10 @@ main{
     }
     .subscribe-footer-news .image-container{
         width: 180%;
+    }
+    .footer-row>div>div{
+        display: flex;
+        justify-content: space-between;
     }
 }
 
