@@ -15,6 +15,6 @@ this project was achived thanks to
 
 # The Website
 
-The results of this project are presented at the site's webpage [link for the site]()
+The results of this project are presented at the site's webpage [link for the site](https://carloshdelreal.github.io/using-bootstrap/)
 
-The Development version of this project is presented at [Link to the development version]()
+The Development version of this project is presented at [Link to the development version](https://raw.githack.com/carloshdelreal/using-bootstrap/development/index.html)

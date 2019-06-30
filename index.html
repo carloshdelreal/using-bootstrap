@@ -5,45 +5,1566 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://kit.fontawesome.com/ccf01e6f33.js"></script>
     
     <title>Using Bootstrap</title>
   </head>
   <body>
-    <nav class="navbar navbar-light fixed-top">
-        <div class="d-none d-lg-block">
-            Fri, Jun 21 2019
-        </div>
-        <div class="d-lg-none"> 
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" xml:space="preserve">
-                <g>
-                    <path class="st0" d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"></path>
-                </g>
-            </svg>
-        </div>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-logo navbar-light fixed-top">
+                <div class="d-none d-lg-block">
+                    Fri, Jun 21 2019
+                </div>
+                <div class="d-lg-none"> 
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" xml:space="preserve">
+                        <g>
+                            <path class="st0" d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"></path>
+                        </g>
+                    </svg>
+                </div>
+        
+                <div class="big-logo d-none d-lg-block">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" xml:space="preserve">
+                        <g>
+                            <path class="st0" d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"></path>
+                        </g>
+                    </svg>
+                </div>
+        
+        
+                <div class="navbar-buttons">
+                        <a href="#">SIGN IN</a>
 
-        <div class="big-logo d-none d-lg-block">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" xml:space="preserve">
-                <g>
-                    <path class="st0" d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"></path>
-                </g>
-            </svg>
+                        <a class="subscribe" href="#">SUBSCRIBE
+                            <svg class="arrow-right d-none d-lg-inline" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 14">
+                                <g>
+                                    <polygon points="8,7 1.1,0 0,1.1 5.9,7 0,12.9 1.1,14 8,7 8,7"></polygon>
+                                </g>
+                            </svg>
+                            
+                        </a>
+                        
+                    
+
+                    <div class="d-lg-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
         </div>
-
-
-        <div class="navbar-buttons">
-            <a href="">Sign In</a>
-            <a class="subscribe" href="">Subscribe</a>
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
+        <nav class="navbar navbar-links d-none d-lg-block">
+            <div class="row">
+                <div class="col-lg-10 pr-0">
+                    <ul>
+                        <li><a href="">U.S.</a></li>
+                        <li><a href="">World</a></li>
+                        <li><a href="">Bussiness</a></li>
+                        <li><a href="">Tech & Science</a></li>
+                        <li><a href="">Culture</a></li>
+                        <li><a href="">Sports</a></li>
+                        <li><a href="">Health</a></li>
+                        <li><a href="">Opinion</a></li>
+                        <li><a href="">Ndelible</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 pl-0">
+                    <div class="search-div">
+                        <label for="search">
+                            <input type="text" name="search" placeholder="Search" id="search">
+                            <svg enable-background="new 0 0 21 21" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><clipPath ><path d="m0 0h21v21h-21z"/></clipPath>
+                                <g clip-path="url(#a)">
+                                    <path d="m8.5 1c4.1 0 7.5 3.4 7.5 7.5 0 1.8-.6 3.5-1.8 4.8l-.4.5-.5.4c-1.3 1.2-3 1.8-4.8 1.8-4.1 0-7.5-3.4-7.5-7.5s3.4-7.5 7.5-7.5m0-1c-4.7 0-8.5 3.8-8.5 8.5s3.8 8.5 8.5 8.5c2.1 0 4-.7 5.5-2l5.5 5.5 1.1-1.1-5.6-5.4c1.2-1.5 2-3.4 2-5.5 0-4.7-3.8-8.5-8.5-8.5z"/>
+                                </g>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
+            <div class="nav-decoration"></div>
+        </nav>
+    </header>
 
     <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-5 col-sm-12 order-2 order-md-1 d-flex flex-column flex-g">
+                    <div class="feature2 featured-stories flex-g">
+                        <div class="sticky-top">
+                            <section>
+                                <div class="block-title">FEATURED STORIES</div>
+                                <article>
+                                    <section class="wrap">
+                                        <div class="category"><a href="">ANALYSIS</a></div>
+                                        <div class="image">
+                                            <a href="">
+                                                <img class="img-fluid" src="./assets/img/best-business-tools-2019.png" alt="rio grande" width="1200">
+                                            </a>
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <h1 class="h2">
+                                            <a href="">Best Business Tools 2019</a>
+                                        </h1>
+                                    </section>
+                                    <section>
+                                        <div class="summary">Working with Statista Inc., the globally recognized data research company, Newsweek has produced an authoritative list of America's Best Business Tools.</div>
+                                    </section>
+                                </article>
+                                <article >
+                                    <section class="wrap">
+                                        <div class="category"><a href="">U.S.</a></div>
+                                        <div class="image">
+                                            <a href="">
+                                                <img class="img-fluid" src="./assets/img/rio-grande2.jpg" alt="rio grande" width="1200">
+                                            </a>
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <h1 class="h2">
+                                            <a href="">Border Patrol Agents Find Woman and Three Children Dead Near Border</a>
+                                        </h1>
+                                    </section>
+                                    <section>
+                                        <div class="summary">Border Patrol agents found the bodies of two infants, a toddler and a 20-year-old woman, according to local law enforcement in Hidalgo County, Texas.</div>
+                                    </section>
+                                </article>
+                                <article>
+                                    <section class="wrap">
+                                        <div class="category"><a href="">WORLD</a></div>
+                                        <div class="image">
+                                            <a href="">
+                                                <img class="img-fluid" src="./assets/img/north-korea-china-kim-pyongyang.jpg" alt="pyongyang" width="1200">
+                                            </a>
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <h1 class="h2">
+                                            <a href="">One-Third of U.S. Backs Nuclear War on North Korea, Killing 1 Million</a>
+                                        </h1>
+                                    </section>
+                                    <section>
+                                        <div class="summary">A study on support for military action against North Korea confirmed that the U.S. public "exhibits only limited aversion to nuclear weapons use and a shocking willingness to support the killing of enemy civilians."</div>
+                                    </section>
+                                </article>
+                                <article>
+                                    <section class="wrap">
+                                        <div class="category"><a href="/us">U.S.</a></div>
+                                        <div class="image">
+                                            <a href="">
+                                                <img class="img-fluid" src="./assets/img/rio-grande2.jpg" alt="rio grande" width="1200">
+                                            </a>
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <h1 class="h2">
+                                            <a href="">Border Patrol Agents Find Woman and Three Children Dead Near Border</a>
+                                        </h1>
+                                    </section>
+                                    <section>
+                                        <div class="summary">Border Patrol agents found the bodies of two infants, a toddler and a 20-year-old woman, according to local law enforcement in Hidalgo County, Texas.</div>
+                                    </section>
+                                </article>
+                                <article>
+                                    <section class="wrap">
+                                        <div class="category"><a href="">WORLD</a></div>
+                                        <div class="image">
+                                            <a href="">
+                                                <img class="img-fluid" src="./assets/img/north-korea-china-kim-pyongyang.jpg" alt="pyongyang" width="1200">
+                                            </a>
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <h1 class="h2">
+                                            <a href="">One-Third of U.S. Backs Nuclear War on North Korea, Killing 1 Million</a>
+                                        </h1>
+                                    </section>
+                                    <section>
+                                        <div class="summary">A study on support for military action against North Korea confirmed that the U.S. public "exhibits only limited aversion to nuclear weapons use and a shocking willingness to support the killing of enemy civilians."</div>
+                                    </section>
+                                </article>
+                                <article>
+                                    <section class="wrap">
+                                        <div class="category"><a href="/us">U.S.</a></div>
+                                        <div class="image">
+                                            <a href="">
+                                                <img class="img-fluid" src="./assets/img/rio-grande2.jpg" alt="rio grande" width="1200">
+                                            </a>
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <h1 class="h2">
+                                            <a href="">Border Patrol Agents Find Woman and Three Children Dead Near Border</a>
+                                        </h1>
+                                    </section>
+                                    <section>
+                                        <div class="summary">Border Patrol agents found the bodies of two infants, a toddler and a 20-year-old woman, according to local law enforcement in Hidalgo County, Texas.</div>
+                                    </section>
+                                </article>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 col-md-7 col-sm-12 order-1 order-md-2 d-flex flex-column flex-g">
+                    <div class="flex-g">
+                        <div class="feature2">
+                            <section>
+                                <div class="block-title">Top Story</div>
+                                <article>
+                                    <div class="wrap">
+                                        <div class="category"><a href="/us">U.S.</a></div>
+                                        <div class="image">
+                                            <a href="">
+                                                <img class="img-fluid" src="./assets/img/rio-grande.jpg" alt="rio grande" width="1200">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h1 class="h2">
+                                        <a href="">Border Patrol Agents Find Woman and Three Children Dead Near Border</a>
+                                    </h1>
+                                    <div class="summary">Border Patrol agents found the bodies of two infants, a toddler and a 20-year-old woman, according to local law enforcement in Hidalgo County, Texas.</div>
+                                </article>
+                            </section>
+                        </div>
+                        <div class="featured-more sticky-top">
+                            <section>
+                                <div class="feature2">
+                                    <div class="block-title sticky-top">MORE STORIES</div>
+                                    <article class="clearfix">
+                                        <div class="image">
+                                            <a href="">
+                                                <div class="image">
+                                                    <img src="./assets/img/rio-grande2.jpg" alt="Rio grande">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h4>
+                                            <a href="">Democrat Announces Challenge to Republican Senator Susan Collins</a>
+                                        </h4>
+                                        <div class="summary">
+                                            Collins was a deciding vote to confirm the Supreme Court judge, a Trump nominee whose confirmation seemed all but certain—until several women came forward with allegations of sexual misconduct that stemmed back to high school.
+                                        </div>
+                                    </article>
+                                    <article class="clearfix">
+                                        <div class="image">
+                                            <a href="">
+                                                <div class="image">
+                                                    <img src="./assets/img/democrat-challenges-susan-collins-cites-kavanaugh-vote.jpg" alt="Rio grande">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h4>
+                                            <a href="">Democrat Announces Challenge to Republican Senator Susan Collins</a>
+                                        </h4>
+                                        <div class="summary">
+                                            Collins was a deciding vote to confirm the Supreme Court judge, a Trump nominee whose confirmation seemed all but certain—until several women came forward with allegations of sexual misconduct that stemmed back to high school.
+                                        </div>
+                                    </article>
+                                    <article class="clearfix">
+                                        <div class="image">
+                                            <a href="">
+                                                <div class="image">
+                                                    <img src="./assets/img/democrat-challenges-susan-collins-cites-kavanaugh-vote.jpg" alt="Rio grande">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h4>
+                                            <a href="">Democrat Announces Challenge to Republican Senator Susan Collins</a>
+                                        </h4>
+                                        <div class="summary">
+                                            Collins was a deciding vote to confirm the Supreme Court judge, a Trump nominee whose confirmation seemed all but certain—until several women came forward with allegations of sexual misconduct that stemmed back to high school.
+                                        </div>
+                                    </article>
+                                    <article class="clearfix">
+                                        <div class="image">
+                                            <a href="">
+                                                <div class="image">
+                                                    <img src="./assets/img/democrat-challenges-susan-collins-cites-kavanaugh-vote.jpg" alt="Rio grande">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h4>
+                                            <a href="">Democrat Announces Challenge to Republican Senator Susan Collins</a>
+                                        </h4>
+                                        <div class="summary">
+                                            Collins was a deciding vote to confirm the Supreme Court judge, a Trump nominee whose confirmation seemed all but certain—until several women came forward with allegations of sexual misconduct that stemmed back to high school.
+                                        </div>
+                                    </article>
+                                    <article class="clearfix">
+                                        <div class="image">
+                                            <a href="">
+                                                <div class="image">
+                                                    <img src="./assets/img/democrat-challenges-susan-collins-cites-kavanaugh-vote.jpg" alt="Rio grande">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h4>
+                                            <a href="">Democrat Announces Challenge to Republican Senator Susan Collins</a>
+                                        </h4>
+                                        <div class="summary">
+                                            Collins was a deciding vote to confirm the Supreme Court judge, a Trump nominee whose confirmation seemed all but certain—until several women came forward with allegations of sexual misconduct that stemmed back to high school.
+                                        </div>
+                                    </article>
+                                    <article class="clearfix">
+                                        <div class="image">
+                                            <a href="">
+                                                <div class="image">
+                                                    <img src="./assets/img/democrat-challenges-susan-collins-cites-kavanaugh-vote.jpg" alt="Rio grande">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h4>
+                                            <a href="">Democrat Announces Challenge to Republican Senator Susan Collins</a>
+                                        </h4>
+                                        <div class="summary">
+                                            Collins was a deciding vote to confirm the Supreme Court judge, a Trump nominee whose confirmation seemed all but certain—until several women came forward with allegations of sexual misconduct that stemmed back to high school.
+                                        </div>
+                                    </article>
+                                    <article class="clearfix">
+                                        <div class="image">
+                                            <a href="">
+                                                <div class="image">
+                                                    <img src="./assets/img/democrat-challenges-susan-collins-cites-kavanaugh-vote.jpg" alt="Rio grande">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h4>
+                                            <a href="">Democrat Announces Challenge to Republican Senator Susan Collins</a>
+                                        </h4>
+                                        <div class="summary">
+                                            Collins was a deciding vote to confirm the Supreme Court judge, a Trump nominee whose confirmation seemed all but certain—until several women came forward with allegations of sexual misconduct that stemmed back to high school.
+                                        </div>
+                                    </article>
+                                    <article class="clearfix">
+                                        <div class="image">
+                                            <a href="">
+                                                <div class="image">
+                                                    <img src="./assets/img/democrat-challenges-susan-collins-cites-kavanaugh-vote.jpg" alt="Rio grande">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h4>
+                                            <a href="">Democrat Announces Challenge to Republican Senator Susan Collins</a>
+                                        </h4>
+                                        <div class="summary">
+                                            Collins was a deciding vote to confirm the Supreme Court judge, a Trump nominee whose confirmation seemed all but certain—until several women came forward with allegations of sexual misconduct that stemmed back to high school.
+                                        </div>
+                                    </article>
+                                    <article class="clearfix">
+                                        <div class="image">
+                                            <a href="">
+                                                <div class="image">
+                                                    <img src="./assets/img/democrat-challenges-susan-collins-cites-kavanaugh-vote.jpg" alt="Rio grande">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h4>
+                                            <a href="">Democrat Announces Challenge to Republican Senator Susan Collins</a>
+                                        </h4>
+                                        <div class="summary">
+                                            Collins was a deciding vote to confirm the Supreme Court judge, a Trump nominee whose confirmation seemed all but certain—until several women came forward with allegations of sexual misconduct that stemmed back to high school.
+                                        </div>
+                                    </article>
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-12 col-sm-12 order-3 d-flex flex-column flex-g">
+                    <div class="flex-g">
+                        <section class="feature2">
+                            <div class="block-title">Opinion</div>
+                            <article class="opinion">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/manny-oliver.png" alt="Rio grande">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Why I'm Collecting Symbols of Lives Cut Short by Gun Violence</a>
+                                </h4>
+                                <div class="author">
+                                    BY MANNY OLIVER
+                                </div>
+                            </article>
+                            <article class="opinion">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/manny-oliver.png" alt="Rio grande">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Why I'm Collecting Symbols of Lives Cut Short by Gun Violence</a>
+                                </h4>
+                                <div class="author">
+                                    BY MANNY OLIVER
+                                </div>
+                            </article>
+                            <article class="opinion">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/manny-oliver.png" alt="Rio grande">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Why I'm Collecting Symbols of Lives Cut Short by Gun Violence</a>
+                                </h4>
+                                <div class="author">
+                                    BY MANNY OLIVER
+                                </div>
+                            </article>
+                            <article class="opinion">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/manny-oliver.png" alt="Rio grande">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Why I'm Collecting Symbols of Lives Cut Short by Gun Violence</a>
+                                </h4>
+                                <div class="author">
+                                    BY MANNY OLIVER
+                                </div>
+                            </article>
+                            <article class="opinion">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/manny-oliver.png" alt="Rio grande">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Why I'm Collecting Symbols of Lives Cut Short by Gun Violence</a>
+                                </h4>
+                                <div class="author">
+                                    BY MANNY OLIVER
+                                </div>
+                            </article>
+                            <article class="opinion">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/manny-oliver.png" alt="Rio grande">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Why I'm Collecting Symbols of Lives Cut Short by Gun Violence</a>
+                                </h4>
+                                <div class="author">
+                                    BY MANNY OLIVER
+                                </div>
+                            </article>
+                        </section>
+                        <section class="feature2 sticky-top">
+                            <div class="block-title">Latest News</div>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/empire-actor-jussie-smollett.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Cops Release Video of Jussie Smollett Wearing Rope Around His Neck</a>
+                                </h4>
+                                <div class="author">
+                                    
+                                </div>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/empire-actor-jussie-smollett.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Cops Release Video of Jussie Smollett Wearing Rope Around His Neck</a>
+                                </h4>
+                                <div class="author">
+                                    
+                                </div>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/empire-actor-jussie-smollett.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Cops Release Video of Jussie Smollett Wearing Rope Around His Neck</a>
+                                </h4>
+                                <div class="author">
+                                    
+                                </div>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/empire-actor-jussie-smollett.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Cops Release Video of Jussie Smollett Wearing Rope Around His Neck</a>
+                                </h4>
+                                <div class="author">
+                                    
+                                </div>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/empire-actor-jussie-smollett.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Cops Release Video of Jussie Smollett Wearing Rope Around His Neck</a>
+                                </h4>
+                                <div class="author">
+                                    
+                                </div>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/empire-actor-jussie-smollett.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Cops Release Video of Jussie Smollett Wearing Rope Around His Neck</a>
+                                </h4>
+                                <div class="author">
+                                    
+                                </div>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/empire-actor-jussie-smollett.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Cops Release Video of Jussie Smollett Wearing Rope Around His Neck</a>
+                                </h4>
+                                <div class="author">
+                                    
+                                </div>
+                            </article>
+                            
+                            <div class="news-signup">
+                                <div>
+                                    <div class="news-signuplogo"><span>N</span></div>
+                                    <div class="title">SIGN UP FOR OUR<br>NEWSLETTER</div>
+                                    <a href="">SIGN UP ></a><br>
+                                    <a href="">Update Your preferences >></a>
+    
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <section>
+                <div class="row">
+                    <div class="col-sm-12 col-md-3 align-self-end">
+                        <article class="magazine feature2">
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/june-21-28-2019-cover-gen-z.jpg" width="1200" alt="z generation">
+                                    </a>
+                                </div>
+                                <div class="category">
+                                    <a href="">June 28 ISSUE</a>
+                                </div>
+    
+                            </div>
+                            <a href="">SEE ALL FEATURES ></a>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-9">
+                        <div class="in-themagazine">
+                            <div class="news-signuplogo"><span>N</span>IN THE MAGAZINE</div>                        
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <article class="magazine-features">
+                                    <div class="wrapper">
+                                        <a href="">
+                                            <img src="./assets/img/fe-genz-01-560447245-banner.jpg" class="img-fluid" alt="banner">
+                                        </a>
+                                    </div>
+                                    <div class="category">
+                                        <span>COVER</span>
+                                        <span><a href="">U.S.</a></span>
+                                    </div>
+                                    <h5>
+                                        <a href="">
+                                            Gen Zs Are Determined to Avoid the Mistakes of Their Predecessors
+                                        </a>
+                                    </h5>
+                                </article>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <article class="magazine-features">
+                                    <div class="wrapper">
+                                        <a href="">
+                                            <img src="./assets/img/fe-genz-01-560447245-banner.jpg" class="img-fluid" alt="banner">
+                                        </a>
+                                    </div>
+                                    <div class="category">
+                                        <span>COVER</span>
+                                        <span><a href="">U.S.</a></span>
+                                    </div>
+                                    <h5>
+                                        <a href="">
+                                            Gen Zs Are Determined to Avoid the Mistakes of Their Predecessors
+                                        </a>
+                                    </h5>
+                                </article>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <article class="magazine-features">
+                                    <div class="wrapper">
+                                        <a href="">
+                                            <img src="./assets/img/fe-genz-01-560447245-banner.jpg" class="img-fluid" alt="banner">
+                                        </a>
+                                    </div>
+                                    <div class="category">
+                                        <span>COVER</span>
+                                        <span><a href="">U.S.</a></span>
+                                    </div>
+                                    <h5>
+                                        <a href="">
+                                            Gen Zs Are Determined to Avoid the Mistakes of Their Predecessors
+                                        </a>
+                                    </h5>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row second-row">
+                    <div class="col-sm-12 col-md-3 align-self-end">
+                        <article class="magazine feature2">
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/june-21-28-2019-cover-gen-z.jpg" width="1200" alt="z generation">
+                                    </a>
+                                </div>
+                                <div class="category">
+                                    <a href="">June 28 ISSUE</a>
+                                </div>
+
+                            </div>
+                            <a href="">SEE ALL FEATURES ></a>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-9 align-self-end">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <article class="magazine-features">
+                                    <div class="wrapper">
+                                        <a href="">
+                                            <img src="./assets/img/fe-genz-01-560447245-banner.jpg" class="img-fluid" alt="banner">
+                                        </a>
+                                    </div>
+                                    <div class="category">
+                                        <span>COVER</span>
+                                        <span><a href="">U.S.</a></span>
+                                    </div>
+                                    <h5>
+                                        <a href="">
+                                            Gen Zs Are Determined to Avoid the Mistakes of Their Predecessors
+                                        </a>
+                                    </h5>
+                                </article>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <article class="magazine-features">
+                                    <div class="wrapper">
+                                        <a href="">
+                                            <img src="./assets/img/fe-genz-01-560447245-banner.jpg" class="img-fluid" alt="banner">
+                                        </a>
+                                    </div>
+                                    <div class="category">
+                                        <span>COVER</span>
+                                        <span><a href="">U.S.</a></span>
+                                    </div>
+                                    <h5>
+                                        <a href="">
+                                            Gen Zs Are Determined to Avoid the Mistakes of Their Predecessors
+                                        </a>
+                                    </h5>
+                                </article>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <article class="magazine-features">
+                                    <div class="wrapper">
+                                        <a href="">
+                                            <img src="./assets/img/fe-genz-01-560447245-banner.jpg" class="img-fluid" alt="banner">
+                                        </a>
+                                    </div>
+                                    <div class="category">
+                                        <span>COVER</span>
+                                        <span><a href="">U.S.</a></span>
+                                    </div>
+                                    <h5>
+                                        <a href="">
+                                            Gen Zs Are Determined to Avoid the Mistakes of Their Predecessors
+                                        </a>
+                                    </h5>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="in-themagazine editorspick-t">
+                            <div class="news-signuplogo"><span>N</span>EDITOR'S PICK</div>                        
+                        </div>
+                    </div>          
+                    <div class="col-sm-12 col-md-6 col-lg-3 feature2">
+                        <article class="editors-pick">
+                            <div class="wrap">
+                                <div class="category"><a href="">WORLD</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/ukraine-dmitry-firtash-paul-manafort-oligarch.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Ukraine Oligarch Linked to Paul Manafort Can Be Extradited to Chicago</a>
+                            </h1>
+                            <div class="summary">Experts say that Firtash's extradition could help usher in political reforms in Ukraine.</div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 feature2">
+                        <article class="editors-pick">
+                            <div class="wrap">
+                                <div class="category"><a href="">WORLD</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/ukraine-dmitry-firtash-paul-manafort-oligarch.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Ukraine Oligarch Linked to Paul Manafort Can Be Extradited to Chicago</a>
+                            </h1>
+                            <div class="summary">Experts say that Firtash's extradition could help usher in political reforms in Ukraine.</div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 feature2">
+                        <article class="editors-pick">
+                            <div class="wrap">
+                                <div class="category"><a href="">WORLD</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/ukraine-dmitry-firtash-paul-manafort-oligarch.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Ukraine Oligarch Linked to Paul Manafort Can Be Extradited to Chicago</a>
+                            </h1>
+                            <div class="summary">Experts say that Firtash's extradition could help usher in political reforms in Ukraine.</div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 feature2">
+                        <article class="editors-pick">
+                            <div class="wrap">
+                                <div class="category"><a href="">WORLD</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/ukraine-dmitry-firtash-paul-manafort-oligarch.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Ukraine Oligarch Linked to Paul Manafort Can Be Extradited to Chicago</a>
+                            </h1>
+                            <div class="summary">Experts say that Firtash's extradition could help usher in political reforms in Ukraine.</div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 feature2">
+                        <article class="editors-pick">
+                            <div class="wrap">
+                                <div class="category"><a href="">WORLD</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/ukraine-dmitry-firtash-paul-manafort-oligarch.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Ukraine Oligarch Linked to Paul Manafort Can Be Extradited to Chicago</a>
+                            </h1>
+                            <div class="summary">Experts say that Firtash's extradition could help usher in political reforms in Ukraine.</div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 feature2">
+                        <article class="editors-pick">
+                            <div class="wrap">
+                                <div class="category"><a href="">WORLD</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/ukraine-dmitry-firtash-paul-manafort-oligarch.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Ukraine Oligarch Linked to Paul Manafort Can Be Extradited to Chicago</a>
+                            </h1>
+                            <div class="summary">Experts say that Firtash's extradition could help usher in political reforms in Ukraine.</div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 feature2">
+                        <article class="editors-pick">
+                            <div class="wrap">
+                                <div class="category"><a href="">WORLD</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/ukraine-dmitry-firtash-paul-manafort-oligarch.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Ukraine Oligarch Linked to Paul Manafort Can Be Extradited to Chicago</a>
+                            </h1>
+                            <div class="summary">Experts say that Firtash's extradition could help usher in political reforms in Ukraine.</div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 feature2">
+                        <article class="editors-pick">
+                            <div class="wrap">
+                                <div class="category"><a href="">WORLD</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/ukraine-dmitry-firtash-paul-manafort-oligarch.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Ukraine Oligarch Linked to Paul Manafort Can Be Extradited to Chicago</a>
+                            </h1>
+                            <div class="summary">Experts say that Firtash's extradition could help usher in political reforms in Ukraine.</div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="row featured-slideshows-row">
+                    <div class="col-sm-12">
+                        <div class="in-themagazine editorspick-t slideshows-t">
+                            <div class="news-signuplogo"><span>N</span>FEATURED SLIDESHOWS</div>                        
+                        </div>
+                    </div> 
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article class="featured-slideshows">
+                            <div class="wrap">
+                                <div class="category"><a href="">7</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/us-space-rocket-center.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">One Giant Leap: 5 U.S. Destinations That Helped Put Man on the Moon</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article class="featured-slideshows">
+                            <div class="wrap">
+                                <div class="category"><a href="">7</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/us-space-rocket-center.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">One Giant Leap: 5 U.S. Destinations That Helped Put Man on the Moon</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article class="featured-slideshows">
+                            <div class="wrap">
+                                <div class="category"><a href="">7</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/us-space-rocket-center.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">One Giant Leap: 5 U.S. Destinations That Helped Put Man on the Moon</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article class="featured-slideshows">
+                            <div class="wrap">
+                                <div class="category"><a href="">7</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/us-space-rocket-center.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">One Giant Leap: 5 U.S. Destinations That Helped Put Man on the Moon</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article class="featured-slideshows">
+                            <div class="wrap">
+                                <div class="category"><a href="">7</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/us-space-rocket-center.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">One Giant Leap: 5 U.S. Destinations That Helped Put Man on the Moon</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article class="featured-slideshows">
+                            <div class="wrap">
+                                <div class="category"><a href="">7</a></div>
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/us-space-rocket-center.jpg" alt="rio grande" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">One Giant Leap: 5 U.S. Destinations That Helped Put Man on the Moon</a>
+                            </h1>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="row us">  
+                    <div class="col-12">
+                        <h2 class="row-title"><a href="">U.S.</a></h2>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article>
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/race-issues-friends-democrats-republicans.jpg" alt="race issues" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Survey: Democrats Discuss Race With Friends, Family More Than Republicans</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article>
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/race-issues-friends-democrats-republicans.jpg" alt="race issues" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Survey: Democrats Discuss Race With Friends, Family More Than Republicans</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="feature2 us-rightcol">
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                        </div>
+                    </div>
+    
+                </div>
+            </section>
+            <section>
+                <div class="row us">  
+                    <div class="col-12">
+                        <h2 class="row-title"><a href="">WORLD</a></h2>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article>
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/race-issues-friends-democrats-republicans.jpg" alt="race issues" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Survey: Democrats Discuss Race With Friends, Family More Than Republicans</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article>
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/race-issues-friends-democrats-republicans.jpg" alt="race issues" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Survey: Democrats Discuss Race With Friends, Family More Than Republicans</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="feature2 us-rightcol">
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="row us">  
+                    <div class="col-12">
+                        <h2 class="row-title"><a href="">BUSSINESS</a></h2>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article>
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/race-issues-friends-democrats-republicans.jpg" alt="race issues" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Survey: Democrats Discuss Race With Friends, Family More Than Republicans</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article>
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/race-issues-friends-democrats-republicans.jpg" alt="race issues" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Survey: Democrats Discuss Race With Friends, Family More Than Republicans</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="feature2 us-rightcol">
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                        </div>
+                    </div>
+    
+                </div>
+            </section>
+            <section>
+                <div class="row us">  
+                    <div class="col-12">
+                        <h2 class="row-title"><a href="">TECH & SCIENCE</a></h2>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article>
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/race-issues-friends-democrats-republicans.jpg" alt="race issues" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Survey: Democrats Discuss Race With Friends, Family More Than Republicans</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article>
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/race-issues-friends-democrats-republicans.jpg" alt="race issues" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Survey: Democrats Discuss Race With Friends, Family More Than Republicans</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="feature2 us-rightcol">
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                        </div>
+                    </div>
+    
+                </div>
+            </section>
+            <section>
+                <div class="row us">  
+                    <div class="col-12">
+                        <h2 class="row-title"><a href="">CULTURE</a></h2>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article>
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/race-issues-friends-democrats-republicans.jpg" alt="race issues" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Survey: Democrats Discuss Race With Friends, Family More Than Republicans</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article>
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/race-issues-friends-democrats-republicans.jpg" alt="race issues" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Survey: Democrats Discuss Race With Friends, Family More Than Republicans</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="feature2 us-rightcol">
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                        </div>
+                    </div>
+    
+                </div>
+            </section>
+            <section>
+                <div class="row us">  
+                    <div class="col-12">
+                        <h2 class="row-title"><a href="">SPORTS</a></h2>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article>
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/race-issues-friends-democrats-republicans.jpg" alt="race issues" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Survey: Democrats Discuss Race With Friends, Family More Than Republicans</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4 feature2">
+                        <article>
+                            <div class="wrap">
+                                <div class="image">
+                                    <a href="">
+                                        <img class="img-fluid" src="./assets/img/race-issues-friends-democrats-republicans.jpg" alt="race issues" width="1200">
+                                    </a>
+                                </div>
+                            </div>
+                            <h1 class="h2">
+                                <a href="">Survey: Democrats Discuss Race With Friends, Family More Than Republicans</a>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="feature2 us-rightcol">
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                            <article class="clearfix latest-news">
+                                <div class="image">
+                                    <a href="">
+                                        <div>
+                                            <img src="./assets/img/stephanie-grisham-press-secretary.jpg" alt="actor">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h4>
+                                    <a href="">Stephanie Grisham, Fierce Defender Of Melania Trump, Named Press Secretary</a>
+                                </h4>
+                            </article>
+                        </div>
+                    </div>
+    
+                </div>
+            </section>
+            <div class="row subscribe-f">
+                
+                <div class="col-sm-12 col-lg-7">
+                    <h2 class="row-title">SUBSCRIBE</h2>
+                    <div class="subscribe-footer bg-light">
+                        <div class="image-wrapper">
+                            <div class="image-container">
+                                <img class="img-fluid" src="./assets/img/cover-june-14th-flat-earth.jpg" alt="cover flat earth" width="1200">
+                            </div>
+                            <div class="image-container">
+                                <img class="img-fluid" src="./assets/img/june-21-28-2019-cover-gen-z.jpg" alt="gen z" width="1200">
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h2>In-depth Stories You Don't See Elsewhere About Topics You Want to Read!</h2>
+                            <p>All Access + Weekly Delivery.
+                                    Choose A Membership That's Perfect for You!</p>
+                            <a href="">SUBSCRIBE ></a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-sm-12 col-lg-5">
+                    <h2 class="row-title">NEWSLETTER</h2>
+                    <div class="subscribe-footer-news">
+                        
+                        <div class="image-container">
+                        </div>                        
+                        <div class="info">
+                            <h2>Daily Briefing</h2>
+                            <p>Take back your inbox. Sign up for our newsletter and start making sense of the world around you.</p>
+                            <a href="">SIGNUP ></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
 
     </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row footer-row">
+                <div class="col-sm-12">
+                    <div class="header">
+                        <div>
+                            <a href="" class="f-logo">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" xml:space="preserve">
+                                    <g>
+                                        <path class="st0" d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                            <p>© 2019 Newsweek</p>
+                        </div>
+                        <ul>
+                            <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fab fa-tumblr"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="menu">
+                            <li class="first leaf">
+                                <a href="/about-newsweek">About Us</a>
+                            </li>
+                            <li class="leaf">
+                                <a href="/corrections">Corrections</a>
+                            </li>
+                            <li class="leaf">
+                                <a href="/contact">Contact Us</a>
+                            </li>
+                            <li class="leaf">
+                                <a href="/editorial-guidelines">Editorial Guidelines</a>
+                            </li>
+                            <li class="leaf">
+                                <a href="/advertise">Advertise</a>
+                            </li>
+                            <li class="leaf">
+                                <a href="/copyright">Copyright</a>
+                            </li>
+                            <li class="leaf">
+                                <a href="/terms-service">Terms &amp; Conditions</a>
+                            </li>
+                            <li class="leaf">
+                                <a href="/privacy-policy">Privacy Policy</a>
+                            </li>
+                            <li class="leaf">
+                                <a href="/cookie-policy">Cookie Policy</a>
+                            </li>
+                            <li class="leaf">
+                                <a href="/terms-sale">Terms of Sale</a>
+                            </li>
+                            <li class="leaf">
+                                <a href="/archive">Archive</a>
+                            </li>
+                            <li class="last leaf">
+                                <a href="/announcements">Announcements</a>
+                            </li>
+                            <li>
+                                <a href="" class="change-consent">Consent preferences</a>
+                            </li>
+                        </ul>
+                        <div class="footer-links-edition">
+                            <label>
+                                <strong>Editions:</strong>
+                            </label>
+                            <ul class="menu">
+                                <li class="first leaf"><a href="https://www.newsweek.com/">U.S. Edition</a></li>
+                                <li class="leaf"><a href="https://www.newsweekjapan.jp/">日本</a></li>
+                                <li class="leaf"><a href="http://newsweekkorea.com/">한국</a></li>
+                                <li class="leaf"><a href="http://newsweekpakistan.com/">Pakistan</a></li>
+                                <li class="leaf"><a href="https://www.newsweek.pl/">Polska</a></li>
+                                <li class="leaf"><a href="https://newsweek.ro/">România</a></li></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
